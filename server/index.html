@@ -4,7 +4,7 @@
   <h2>BoomSMP.serv.gs</h2>
   </div>
     <p id="sv">Loading...</p>
-  <p id="rest">Loading ...</p>
+<!--   <p id="rest">Loading ...</p> -->
 </div>
 <style>
   body,html{
@@ -109,7 +109,7 @@ var url = "https://api.minetools.eu/ping/boomsmp.serv.gs/25565";
  
 $.getJSON(url, function(r) {
     //data is the JSON string
-          $('#sv').html('<b>Server MOTD:</b> '+r.description.replace(/§(.+?)/gi, '')+'<br><b>Server Version:</b> '+r.version.name);
+          $('#sv').html('<b>Server MOTD:</b> '+r.description.replace(/§(.+?)/gi, '')+'<br><b>Server Version:</b> '+r.version.name+'<br><b>Players Online:</b> ' + r.players.online+pl+pl2+pl3+pl4+pl5');
  if(r.error){
     $('#rest').html('Server Offline');
    return false;
@@ -128,7 +128,7 @@ var pl5 = '';
 
 
 
-  $('#rest').html('<b>Players Online:</b> ' + r.players.online+pl+pl2+pl3+pl4+pl5);
+ // $('#rest').html('<b>Players Online:</b> ' + r.players.online+pl+pl2+pl3+pl4+pl5);
  $('#favicon').attr('src', r.favicon);
 
 });
