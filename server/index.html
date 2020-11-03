@@ -136,11 +136,11 @@ var al3 = '';
 var al4 = '';
 var al5 = '';
 
- if(r.players.sample.length > 0 ){ al = '<br>Name: '+b.players.sample[0].name;  } 
- if(r.players.sample.length > 1 ){ al2 = '<br>Name: '+b.players.sample[1].name;  }
-  if(r.players.sample.length > 2 ){ al3 = '<br>Name: '+b.players.sample[2].name;  } 
- if(r.players.sample.length > 3 ){ al4 = '<br>Name: '+b.players.sample[3].name;  } 
-   if(r.players.sample.length > 4 ){ al5 = '<br>Name: '+b.players.sample[4].name;  } 
+ if(b.players.sample.length > 0 ){ al = '<br>Name: '+b.players.sample[0].name;  } 
+ if(b.players.sample.length > 1 ){ al2 = '<br>Name: '+b.players.sample[1].name;  }
+  if(b.players.sample.length > 2 ){ al3 = '<br>Name: '+b.players.sample[2].name;  } 
+ if(b.players.sample.length > 3 ){ al4 = '<br>Name: '+b.players.sample[3].name;  } 
+   if(b.players.sample.length > 4 ){ al5 = '<br>Name: '+b.players.sample[4].name;  } 
 
           $('#sv').html('<b>Server MOTD:</b> '+b.description.replace(/§(.+?)/gi, '')+'<br><b>Server Version:</b> '+b.version.name+'<br><b>Players Online:</b> ' + b.players.online+al+al2+al3+al4+al5);
   });
