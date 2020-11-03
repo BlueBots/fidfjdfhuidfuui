@@ -109,7 +109,7 @@ var url = "https://api.minetools.eu/ping/boomsmp.serv.gs/25565";
  
 $.getJSON(url, function(r) {
     //data is the JSON string
-          $('#sv').html(r.description.replace(/§(.+?)/gi, '')+'<br><b>Server Version:</b> '+r.version.name);
+          $('#sv').html('<b>Server MOTD:</b> '+r.description.replace(/§(.+?)/gi, '')+'<br><b>Server Version:</b> '+r.version.name);
  if(r.error){
     $('#rest').html('Server Offline');
    return false;
