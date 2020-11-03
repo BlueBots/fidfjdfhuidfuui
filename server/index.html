@@ -115,15 +115,20 @@ $.getJSON(url, function(r) {
    return false;
  } 
 var pl = '';
+  var pl2 = '';
+var pl3 = '';
+var pl4 = '';
+var pl5 = '';
+
  if(r.players.sample.length > 0 ){ pl = '<br>Name: '+r.players.sample[0].name;  } 
- if(r.players.sample.length > 1 ){ pl = '<br>Name: '+r.players.sample[1].name;  }
-  if(r.players.sample.length > 2 ){ pl = '<br>Name: '+r.players.sample[2].name;  } 
- if(r.players.sample.length > 3 ){ pl = '<br>Name: '+r.players.sample[3].name;  } 
-   if(r.players.sample.length > 4 ){ pl = '<br>Name: '+r.players.sample[4].name;  } 
+ if(r.players.sample.length > 1 ){ pl2 = '<br>Name: '+r.players.sample[1].name;  }
+  if(r.players.sample.length > 2 ){ pl3 = '<br>Name: '+r.players.sample[2].name;  } 
+ if(r.players.sample.length > 3 ){ pl4 = '<br>Name: '+r.players.sample[3].name;  } 
+   if(r.players.sample.length > 4 ){ pl5 = '<br>Name: '+r.players.sample[4].name;  } 
 
 
 
-  $('#rest').html('<b>Players Online:</b> ' + r.players.online+pl);
+  $('#rest').html('<b>Players Online:</b> ' + r.players.online+pl+pl2+pl3+pl4+pl5);
  $('#favicon').attr('src', r.favicon);
 
 });
