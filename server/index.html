@@ -109,7 +109,7 @@ var url = "https://api.minetools.eu/ping/boomsmp.serv.gs/25565";
  
 $.getJSON(url, function(r) {
     //data is the JSON string
-          $('#sv').html(r.description.replace'<br><b>Server Version:</b> '+r.version.name);
+          $('#sv').html(r.description.replace(/§(.+?)/gi, '')+'<br><b>Server Version:</b> '+r.version.name);
  if(r.error){
     $('#rest').html('Server Offline');
    return false;
@@ -117,7 +117,7 @@ $.getJSON(url, function(r) {
 var pl = '';
  if(r.players.sample.length > 0 ){ pl = '<br>'+r.players.sample[0].name;  } 
 
-  $('#rest').html(r.description.replace(/§(.+?)/gi, '')+'<br><b>Players Online:</b> '+r.players.online+pl);
+  $('#rest').html('<b>Players Online:</b> '+r.players.online+pl);
  $('#favicon').attr('src', r.favicon);
 
 });
