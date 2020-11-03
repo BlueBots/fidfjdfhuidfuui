@@ -1,5 +1,5 @@
-<div class="card"> <div class="icon"><img src="https://pbs.twimg.com/profile_images/808180587605331969/u-CULTwl_400x400.jpg" id="favicon"></div><div class="header">
-  <div class="image"> <img src="https://pbs.twimg.com/media/C2bx8KGWQAEORsE.jpg" alt="" /> </div>
+<div class="card"> <div class="icon"><img src="https://blueboy-is-a.questionable.link/8m8Cqw.png" id="favicon"></div><div class="header">
+  <div class="image"> <img src="https://blueboy-is-a.questionable.link/z9h7GK.png" alt="" /> </div>
  
   <h2>BoomSMP.serv.gs</h2>
   </div>
@@ -109,7 +109,7 @@ $.getJSON(url, function(r) {
    return false;
  } 
 var pl = '';
- if(r.players.sample.length > 0 ){ pl = '<br>OP: '+r.players.sample[0].name;  } 
+ if(r.players.sample.length > 0 ){ pl = '<br>'+r.players.sample[0].name;  } 
   $('#rest').html(r.description.replace(/§(.+?)/gi, '')+'<br><b>Players Online:</b> '+r.players.online+pl);
  $('#favicon').attr('src', r.favicon);
     
